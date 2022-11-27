@@ -1,0 +1,64 @@
+// Body
+.body {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  background-color: var(--main-bg-color);
+
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+// Section
+.section {
+  min-width: 320px;
+  padding: 60px 0;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include breakpoint-min($tablet) {
+    max-width: none;
+  }
+
+  @include breakpoint-min($desktop) {
+    max-width: none;
+    padding: 94px 0;
+  }
+}
+.section-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  color: var(--title-text-color);
+
+  &--secondary-bg-color {
+    background-color: var(--secondary-bg-color);
+  }
+
+  @include breakpoint-min($desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+// Container
+.container {
+  padding: 0 15px;
+  min-width: 320px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint-min($tablet) {
+    width: 768px;
+    max-width: none;
+  }
+
+  @include breakpoint-min($desktop) {
+    width: 1200px;
+    max-width: none;
+  }
+}

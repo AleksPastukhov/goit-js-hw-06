@@ -1,0 +1,50 @@
+:root {
+  // font
+  --primary-font: Roboto, sans-serif;
+  --secondary-font: Raleway, sans-serif;
+
+  // Text color
+  --primary-text-color: #757575;
+  --secondary-text-color-a60: rgba(255, 255, 255, 0.6);
+  --accent-text-color: #2196f3;
+  --white-text-color: #ffffff;
+  --title-text-color: #212121;
+
+  // Bg color
+  --main-bg-color: #ffffff;
+  --secondary-bg-color: #f5f4fa;
+  --accent-bg-color: #2196f3;
+  --bg-hero-color: #c4c4c4;
+  --modal-bg-color: rgba(0, 0, 0, 0.2);
+  --about-bg-color: rgba(47, 48, 58, 0.8);
+  --overlay-bg-color: rgba(33, 150, 243, 0.9);
+  --bg-overlay: rgba(47, 48, 58, 0.4);
+  --background-footer-color: #2f303a;
+
+  // Icon color
+  --icon-bg-color: rgba(255, 255, 255, 0.1);
+  --white-icon-color: #ffffff;
+
+  // Box shadow color
+  --box-shadow-color-a15: rgba(0, 0, 0, 0.15);
+  --box-shadow-color-a12: rgba(0, 0, 0, 0.12);
+  --box-shadow-color-a06: rgba(0, 0, 0, 0.06);
+  --box-shadow-color-a16: rgba(0, 0, 0, 0.16);
+  --box-shadow-color-a14: rgba(0, 0, 0, 0.14);
+  --box-shadow-color-a20: rgba(0, 0, 0, 0.2);
+
+  // Othes
+  --duration-and-cubic-bezier: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --accent-border-color: #2196f3;
+  --social-icon-color: #afb1b8;
+  --logo-color: #000000;
+  --modal-border-color: rgba(0, 0, 0, 0.1);
+  --input-border-color: rgba(33, 33, 33, 0.2);
+  --plaseholder-color: rgba(117, 117, 117, 0.5);
+  --footer-form-border-color: rgba(255, 255, 255, 0.3);
+}
+
+// breakpoints
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;

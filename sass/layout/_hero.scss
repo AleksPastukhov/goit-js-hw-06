@@ -1,0 +1,119 @@
+// Hero
+.hero {
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  background-color: var(--bg-hero-color);
+  text-align: center;
+
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)),
+    url(../images/bg/mobile/hero-mobile-bg.jpg);
+  background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)),
+    -webkit-image-set(url(../images/bg/mobile/hero-mobile-bg.webp) 1x);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include breakpoint-min($desktop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+  }
+
+  &__title {
+    max-width: 360px;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-left: auto;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: calc(42 / 26);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--white-text-color);
+
+    @include breakpoint-min($desktop) {
+      font-size: 44px;
+      line-height: calc(60 / 44);
+      max-width: none;
+      width: 696px;
+    }
+  }
+
+  &__button {
+    padding: 10px 32px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    letter-spacing: 0.06em;
+    color: var(--white-text-color);
+    background-color: var(--accent-bg-color);
+
+    border: none;
+    box-shadow: 0px 4px 4px var(--box-shadow-color-a15);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  // Mobile screen
+
+  @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)),
+      url(../images/bg/mobile/hero-mobile-bg@2x.jpg);
+    background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)),
+      -webkit-image-set(url(../images/bg/mobile/hero-mobile-bg@2x.webp) 2x);
+  }
+
+  @media screen and (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+    background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)),
+      url(../images/bg/mobile/hero-mobile-bg@3x.jpg);
+    background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)),
+      -webkit-image-set(url(../images/bg/mobile/hero-mobile-bg@3x.webp) 3x);
+  }
+
+  // Tablet screen
+  @media screen and (min-width: 481px) {
+    background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)),
+      url(../images/bg/tablet/hero-tablet-bg.jpg);
+    background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)),
+      -webkit-image-set(url(../images/bg/tablet/hero-tablet-bg.webp) 1x);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)),
+        url(../images/bg/tablet/hero-tablet-bg@2x.jpg);
+      background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)),
+        -webkit-image-set(url(../images/bg/tablet/hero-tablet-bg@2x.webp) 2x);
+    }
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)),
+        url(../images/bg/tablet/hero-tablet-bg@3x.jpg);
+      background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)),
+        -webkit-image-set(url(../images/bg/tablet/hero-tablet-bg@3x.webp) 3x);
+    }
+  }
+
+  // // Desktop screen
+  @media screen and (min-width: 769px) {
+    background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)),
+      url(../images/bg/desctop/hero-desctop-bg.jpg);
+    background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)),
+      -webkit-image-set(url(../images/bg/desctop/hero-desctop-bg.webp) 1x);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)),
+        url(../images/bg/desctop/hero-desctop-bg@2x.jpg);
+      background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)),
+        -webkit-image-set(url(../images/bg/desctop/hero-desctop-bg@2x.webp) 2x);
+    }
+
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)),
+        url(../images/bg/desctop/hero-desctop-bg@3x.jpg);
+      background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)),
+        -webkit-image-set(url(../images/bg/desctop/hero-desctop-bg@3x.webp) 3x);
+    }
+  }
+}

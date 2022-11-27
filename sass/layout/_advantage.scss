@@ -1,0 +1,61 @@
+// Advantage
+.advantage-section {
+  &--padding-top {
+    @include breakpoint-min($desktop) {
+      padding-top: 94px;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.advantages-set {
+  @extend %list;
+
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+    @include breakpoint-min($tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    margin-bottom: 30px;
+
+    background-color: var(--secondary-bg-color);
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    text-transform: uppercase;
+    color: var(--title-text-color);
+    text-align: center;
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    line-height: calc(24 / 14);
+  }
+
+  @include breakpoint-min($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__item {
+      max-width: 354px;
+
+      @include breakpoint-min($desktop) {
+        flex-basis: 270px;
+      }
+    }
+  }
+}
