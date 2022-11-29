@@ -22,9 +22,9 @@ function createNewBoxItem() {
   const numberOfBoxes = refs.inputEl.value;
 
   for (let i = 1; i <= numberOfBoxes; i += 1) {
-    const getNewColor = getRandomHexColor();
+    const newColor = getRandomHexColor();
     const options = {
-      bgColor: getNewColor,
+      bgColor: newColor,
       size: `${i * 10 + 20}px`,
       itemNumber: i,
       numberOfBoxes,
