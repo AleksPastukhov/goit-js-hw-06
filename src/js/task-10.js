@@ -12,22 +12,37 @@ const refs = {
 refs.createBtn.addEventListener('click', onCreateBtnClick);
 refs.destroyBtn.addEventListener('click', onDestroyBtnClick);
 
-function onCreateBtnClick(event) {
-  const getNewColor = getRandomHexColor();
-  if (Number(refs.inputEl.value) > 0) {
-    console.dir(Number(refs.inputEl.value));
+function onCreateBtnClick() {
+  refs.boxEl.append(...createNewBoxItem());
+}
+
+function createNewBoxItem() {
+  refs.boxEl.textContent = '';
+  const elements = [];
+  const numberOfBoxes = refs.inputEl.value;
+
+  for (let i = 1; i <= numberOfBoxes; i += 1) {
+    const getNewColor = getRandomHexColor();
+    const options = {
+      bgColor: getNewColor,
+      size: `${i * 10 + 20}px`,
+      itemNumber: i,
+      numberOfBoxes,
+    };
+
+    const boxItem = document.createElement('div');
+
+    boxItem.classList.add(`item${options.itemNumber}`);
+    boxItem.style.backgroundColor = `${options.bgColor}`;
+    boxItem.style.width = `${options.size}`;
+    boxItem.style.height = `${options.size}`;
+    elements.push(boxItem);
   }
-  return getNewColor;
+
+  return elements;
 }
 
-function createNewBoxItem(bgColor, widhItem, hei itemNumber) {
-  const boxItem = document.createElement('div');
-  boxItem.classList.add(`item${itemNumber}`);
-  boxItem.style.backgroundColor = 'bgColor';
-    boxItem.style.width = 'bgColor';
-  // boxItem.textContent = elem;
-  return boxItem;
+function onDestroyBtnClick() {
+  refs.boxEl.textContent = '';
+  refs.inputEl.value = '';
 }
-console.log(createNewBoxItem(getNewColor));
-
-function onDestroyBtnClick(event) {}
